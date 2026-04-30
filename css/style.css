@@ -1,0 +1,31 @@
+
+
+* {
+    box-sizing: border-box;
+}
+
+html {
+    font-size: 16px;
+}
+
+body {
+    font-family: 'Roboto', sans-serif;
+    font-size: 1rem;
+    padding: 1rem;
+}
+
+
+
+p {
+  font-size: 1rem;
+  line-height: 1.5;
+  text-align: justify;
+}
+
+button {
+    background-color: #007bff;
+    color: white;
+    padding: .5rem 1rem;
+    border: 1px solid #007bff;
+    border-radius: 5px;
+}
