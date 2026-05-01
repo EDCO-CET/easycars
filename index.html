@@ -13,7 +13,7 @@
         <link rel="stylesheet" href="css/style.css">
    </head>
    <body>
-     <header>
+     <header id="header">
         <h1 id="main-title" class="heading_1">Easycars</h1>
         <nav>
             <ul>
@@ -31,45 +31,43 @@
         <section id="cars">
             <h2 class="highlight">Cars</h2>
             <p>Check our available cars</p>
-            <table>
-                <tr>
-                    <td rowspan="2">
-                        <article>
-                            <header>
-                                <h3>Porshe</h3>
-                            </header>
-                            <img width="300" height="200" src="img/porshe-p4.avif" alt="Porshe Panamera 2024">
-                            <p>Price: $100000</p>
-                            <button>Buy</button>
-                        </article>
-                    </td>
-                    <td>
-                        <article>
-                            <header>
-                                <h3>Ferrari</h3>
-                            </header>
-                            <img width="300" height="200" src="https://www.amalgamcollection.com/cdn/shop/files/Wideedit_44fe4a82-c08b-449e-87e3-5380099e6329_2000x850_crop_center.jpg?v=1706017250" alt="Ferrari 2024">
-                            <p>Price: $200000</p>
-                            <button>Buy</button>
-                            <button>Favorite</button>
-                        </article>
-                    </td>
-                    <td>
-                        <article>
-                            <header>
-                                <h3>Volvo</h3>
-                            </header>
-                            <img width="300" height="200" src="https://www.amalgamcollection.com/cdn/shop/files/Wideedit_44fe4a82-c08b-449e-87e3-5380099e6329_2000x850_crop_center.jpg?v=1706017250" alt="Volvo 2024">
-                            <p>Price: $300000</p>
-                            <button>Buy</button>
-                            <button>Favorite</button>
-                        </article>
-                    </td>
-                </tr>
-                <tr>
-                    <td></td>
-                </tr>
-            </table>
+            <div class="card-container">
+                <article class="card">
+                    <header>
+                        <h3>Porshe</h3>
+                    </header>
+                    <img class="card--image" width="300" height="200" src="img/porshe-p4.avif" alt="Porshe Panamera 2024">
+                    <p class="card--price">Price: $100000</p>
+                    <div class="card--button-container">
+                        <button class="btn btn-primary">Buy</button>
+                        <button class="btn btn-favorite">Favorite</button>
+                    </div>
+                </article>
+            
+                <article class="card">
+                    <header>
+                        <h3>Ferrari</h3>
+                    </header>
+                    <img class="card--image" width="300" height="200" src="https://www.amalgamcollection.com/cdn/shop/files/Wideedit_44fe4a82-c08b-449e-87e3-5380099e6329_2000x850_crop_center.jpg?v=1706017250" alt="Ferrari 2024">
+                    <p class="card--price">Price: $200000</p>
+                    <div class="card--button-container">
+                        <button class="btn btn-primary">Buy</button>
+                        <button class="btn btn-favorite">Favorite</button>
+                    </div>
+                </article>
+            
+                <article class="card">
+                    <header>
+                        <h3>Volvo</h3>
+                    </header>
+                    <img class="card--image" width="300" height="200" src="https://www.amalgamcollection.com/cdn/shop/files/Wideedit_44fe4a82-c08b-449e-87e3-5380099e6329_2000x850_crop_center.jpg?v=1706017250" alt="Volvo 2024">
+                    <p class="card--price">Price: $300000</p>
+                    <div class="card--button-container">
+                        <button class="btn btn-primary">Buy</button>
+                        <button class="btn btn-favorite">Favorite</button>
+                    </div>
+                </article>
+            </div>
         </section>
         <section>
             <h2>Comparison</h2>
@@ -145,7 +143,7 @@
                     </tr>
                     
                 </table>
-                <button type="submit">Send</button>
+                <button class="btn btn-primary" type="submit">Send</button>
             </form>
         </section>
      </main>

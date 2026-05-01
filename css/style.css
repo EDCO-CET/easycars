@@ -2,15 +2,34 @@
 
 * {
     box-sizing: border-box;
+    margin: 0;
+    padding: 0;
 }
 
 html {
-    font-size: 16px;
+    font-size: 16px; /* Base font size  1rem = 16px */
 }
 
 body {
     font-family: 'Roboto', sans-serif;
     font-size: 1rem;
+}
+
+/* Header */
+#header {
+    display: flex;
+    justify-content: flex-start;
+    gap: 2rem;
+    background-color: #4090e6;
+    color: white;
+    position: sticky;
+    top: 0;
+    z-index: 1;
+    padding: 1rem;
+}
+
+/* Main Content */
+#main-content {
     padding: 1rem;
 }
 
@@ -22,10 +41,61 @@ p {
   text-align: justify;
 }
 
-button {
-    background-color: #007bff;
-    color: white;
+.card-container {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    gap: 1rem;
+}
+
+.card {
+    display: flex;
+    flex-direction: column;
+    border: 1px solid #ebeced;
+    padding: 1rem;
+    border-radius: 5px;
+    gap: 1rem;
+}
+
+.card--image {
+    border-radius: 15px;
+}
+
+.card--price {
+    font-weight: bold;
+    text-align: right;
+}
+
+.card--button-container {
+    display: flex;
+    justify-content: flex-end;
+    gap: .5rem;
+}
+
+
+
+
+/* Buttons */
+.btn {
     padding: .5rem 1rem;
-    border: 1px solid #007bff;
+    border: 1px solid #ffffff;
     border-radius: 5px;
 }
+
+.btn-primary {
+    background-color: #007bff;
+    color: white;
+}
+.btn-secondary {
+    background-color: #6c757d;
+    color: white;
+}
+.btn-favorite {
+    background-color: #8061b7;
+    color: white;
+}
+.btn-danger {
+    background-color: #dc3545;
+    color: white;
+}
+
