@@ -14,29 +14,35 @@
    </head>
    <body>
      <header id="header">
-        <h1 id="main-title">Easycars</h1>
-        <nav class="main-nav">
-            <ul>
-                <li><a href="#home">Home</a></li>
-                <li><a href="#about">About</a></li>
-                <li><a href="#contact">Contact</a></li>
-            </ul>
-        </nav>
+        <div class="header__inner">
+            <h1 id="main-title">
+                <span class="brand-mark">EC</span>
+                Easycars
+            </h1>
+            <nav class="main-nav">
+                <ul>
+                    <li><a href="#home">Home</a></li>
+                    <li><a href="#cars">Cars</a></li>
+                    <li><a href="#comparison">Comparison</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                </ul>
+            </nav>
+        </div>
      </header>
      <main id="main-content">
-        <section id="home">
-            <div class="home__content">
-                <p class="home__eyebrow">Rent premium cars</p>
-                <h2 class="home__title">Drive your dream car <span class="home__title-accent">today</span></h2>
-                <p class="home__text">
+        <section id="home" class="hero">
+            <div class="hero__content">
+                <p class="hero__eyebrow">Rent premium cars</p>
+                <h2 class="hero__title">Drive your dream car <span class="hero__title--accent">today</span></h2>
+                <p class="hero__text">
                     At Easycars, we connect you with the best models at the best price.
                     Book in minutes, pick it up wherever you want, and enjoy the ride.
                 </p>
-                <div class="home__actions">
-                    <button class="btn btn-primary" href="#cars">See cars</button>
-                    <button class="btn btn-secondary" href="#contact">Contact Us</button>
+                <div class="hero__actions">
+                    <a href="#cars" class="btn btn-primary">See cars</a>
+                    <a href="#contact" class="btn btn-ghost">Contact Us</a>
                 </div>
-                <dl class="home__stats">
+                <dl class="hero__stats">
                     <div>
                         <dt>+500</dt>
                         <dd>Cars available</dd>
@@ -51,133 +57,178 @@
                     </div>
                 </dl>
             </div>
-            <div class="home__visual">
-                <div class="home__shape home__shape--1"></div>
-                <div class="home__shape home__shape--2"></div>
-                <div class="home__shape home__shape--3"></div>
+            <div class="hero__visual" aria-hidden="true">
+                <div class="hero__shape hero__shape--1"></div>
+                <div class="hero__shape hero__shape--2"></div>
+                <div class="hero__shape hero__shape--3"></div>
             </div>
         </section>
-        <section id="cars">
-            <h2 class="highlight">Cars</h2>
-            <p>Check our available cars</p>
+        <section id="cars" class="cars">
+            <header class="section-head">
+                <p class="section-eyebrow">Catalog</p>
+                <h2 class="highlight">Our Cars</h2>
+                <p class="section-subtitle">Browse our selection of premium vehicles</p>
+            </header>
             <div class="card-container">
                 <article class="card">
-                    <header>
-                        <h3>Porshe</h3>
+                    <header class="card__head">
+                        <span class="card__tag">Sport</span>
+                        <h3>Porsche Panamera</h3>
                     </header>
-                    <img class="card--image" width="300" height="200" src="img/porshe-p4.avif" alt="Porshe Panamera 2024">
-                    <p class="card--price">Price: $100000</p>
+                    <img class="card--image" width="300" height="200" src="img/porshe-p4.avif" alt="Porsche Panamera 2024">
+                    <ul class="card__specs">
+                        <li><span>Speed</span><strong>300 km/h</strong></li>
+                        <li><span>0-100</span><strong>3.5s</strong></li>
+                        <li><span>Seats</span><strong>4</strong></li>
+                    </ul>
+                    <p class="card--price">
+                        <span class="card--price__amount">$320</span>
+                        <span class="card--price__unit">/ day</span>
+                    </p>
                     <div class="card--button-container">
-                        <button class="btn btn-primary">Buy</button>
-                        <button class="btn btn-favorite">Favorite</button>
+                        <button class="btn btn-primary">Rent</button>
+                        <button class="btn btn-favorite" aria-label="Add to favorites">♡</button>
                     </div>
                 </article>
-            
-                <article class="card">
-                    <header>
-                        <h3>Ferrari</h3>
+
+                <article class="card card--featured">
+                    <header class="card__head">
+                        <span class="card__tag card__tag--featured">Most popular</span>
+                        <h3>Ferrari Roma</h3>
                     </header>
-                    <img class="card--image" width="300" height="200" src="https://www.amalgamcollection.com/cdn/shop/files/Wideedit_44fe4a82-c08b-449e-87e3-5380099e6329_2000x850_crop_center.jpg?v=1706017250" alt="Ferrari 2024">
-                    <p class="card--price">Price: $200000</p>
+                    <img class="card--image" width="300" height="200" src="https://www.amalgamcollection.com/cdn/shop/files/Wideedit_44fe4a82-c08b-449e-87e3-5380099e6329_2000x850_crop_center.jpg?v=1706017250" alt="Ferrari Roma 2024">
+                    <ul class="card__specs">
+                        <li><span>Speed</span><strong>320 km/h</strong></li>
+                        <li><span>0-100</span><strong>3.4s</strong></li>
+                        <li><span>Seats</span><strong>2+2</strong></li>
+                    </ul>
+                    <p class="card--price">
+                        <span class="card--price__amount">$520</span>
+                        <span class="card--price__unit">/ day</span>
+                    </p>
                     <div class="card--button-container">
-                        <button class="btn btn-primary">Buy</button>
-                        <button class="btn btn-favorite">Favorite</button>
+                        <button class="btn btn-primary">Rent</button>
+                        <button class="btn btn-favorite" aria-label="Add to favorites">♡</button>
                     </div>
                 </article>
-            
+
                 <article class="card">
-                    <header>
-                        <h3>Volvo</h3>
+                    <header class="card__head">
+                        <span class="card__tag">Family</span>
+                        <h3>Volvo XC90</h3>
                     </header>
-                    <img class="card--image" width="300" height="200" src="https://www.amalgamcollection.com/cdn/shop/files/Wideedit_44fe4a82-c08b-449e-87e3-5380099e6329_2000x850_crop_center.jpg?v=1706017250" alt="Volvo 2024">
-                    <p class="card--price">Price: $300000</p>
+                    <img class="card--image" width="300" height="200" src="https://upload.wikimedia.org/wikipedia/commons/8/8d/Volvo_XC90_front.JPG" alt="Volvo XC90 2024">
+                    <ul class="card__specs">
+                        <li><span>Speed</span><strong>240 km/h</strong></li>
+                        <li><span>0-100</span><strong>5.8s</strong></li>
+                        <li><span>Seats</span><strong>7</strong></li>
+                    </ul>
+                    <p class="card--price">
+                        <span class="card--price__amount">$180</span>
+                        <span class="card--price__unit">/ day</span>
+                    </p>
                     <div class="card--button-container">
-                        <button class="btn btn-primary">Buy</button>
-                        <button class="btn btn-favorite">Favorite</button>
+                        <button class="btn btn-primary">Rent</button>
+                        <button class="btn btn-favorite" aria-label="Add to favorites">♡</button>
                     </div>
                 </article>
             </div>
         </section>
-        <section>
-            <h2>Comparison</h2>
-            <table border="1">
-                <caption>Car Comparison</caption>
-                <thead>
-                    <tr>
-                        <th>Feature</th>
-                        <th>Porshe</th>
-                        <th>Ferrari</th>
-                    </tr>
-                </thead>
-                <tbody>
-                    <tr>
-                        <td>Top speed</td>
-                        <td>300 km/h</td>
-                        <td>350 km/h</td>
-                    </tr>
-                    <tr>
-                        <td>0-100 km/h</td>
-                        <td>3.5 seconds</td>
-                        <td>2.8 seconds</td>
-                    </tr>
-                    <tr>
-                        <td>Fuel efficiency</td>
-                        <td>8 L/100km</td>
-                        <td>10 L/100km</td>
-                    </tr>
-                </tbody>
-            </table>  
-        </section>
-        <section id="contact">
-            <h2>Contact us</h2>
-            <form action="/" method="get" autocomplete="on">
-                <table>
-                    <tr>
-                        <td><label for="name">Name</label></td>
-                        <td><input type="text" id="name" name="name" required pattern="[A-Za-z\s]+"></td>
-                    </tr>
-                    <tr>
-                        <td>
-                            <label for="province">Provincia:</label>
-                        </td>
-                        <td>
-                            <select id="province" name="province">
-                                <option value="">-- Select --</option>
-                                <option value="madrid">Madrid</option>
-                                <option value="barcelona">Barcelona</option>
-                                <optgroup label="Andalucía">
-                                    <option>Sevilla</option>
-                                    <option>Málaga</option>
-                                </optgroup>
-                            </select>
-                        </td>
+        <section id="comparison" class="comparison">
+            <header class="section-head">
+                <p class="section-eyebrow">Compare</p>
+                <h2 class="highlight">Side-by-side specs</h2>
+            </header>
+            <div class="table-wrap">
+                <table class="comparison__table">
+                    <caption class="visually-hidden">Car Comparison</caption>
+                    <thead>
                         <tr>
-                            <td>Language</td>
-                            <td>
-                                <select id="languages" name="languages" multiple size="3">
-                                    <option value="es">Español</option>
-                                    <option value="en">Inglés</option>
-                                    <option value="fr">Francés</option>
-                                </select>
-                            </td>
+                            <th scope="col">Feature</th>
+                            <th scope="col">Porsche</th>
+                            <th scope="col">Ferrari</th>
+                            <th scope="col">Volvo</th>
                         </tr>
-                    </tr>
-                    <tr>
-                        <td><label for="email" >Email</label></td>
-                        <td><input type="email" id="email" name="email" required></td>
-                    </tr>
-                    <tr>
-                        <td><label for="comment">Comments:</label></td>
-                        <td><textarea id="comment" name="userComment" rows="5" cols="40" placeholder="Escribe tu comentario aquí..."></textarea></td>
-                    </tr>
-                    
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <th scope="row">Top speed</th>
+                            <td>300 km/h</td>
+                            <td>320 km/h</td>
+                            <td>240 km/h</td>
+                        </tr>
+                        <tr>
+                            <th scope="row">0-100 km/h</th>
+                            <td>3.5 s</td>
+                            <td>3.4 s</td>
+                            <td>5.8 s</td>
+                        </tr>
+                        <tr>
+                            <th scope="row">Fuel efficiency</th>
+                            <td>8 L/100km</td>
+                            <td>10 L/100km</td>
+                            <td>7 L/100km</td>
+                        </tr>
+                        <tr>
+                            <th scope="row">Price / day</th>
+                            <td>$320</td>
+                            <td>$520</td>
+                            <td>$180</td>
+                        </tr>
+                    </tbody>
                 </table>
-                <button class="btn btn-primary" type="submit">Send</button>
+            </div>
+        </section>
+        <section id="contact" class="contact">
+            <header class="section-head">
+                <p class="section-eyebrow">Ready?</p>
+                <h2 class="highlight">Contact us</h2>
+                <p class="section-subtitle">Tell us what you need and we'll get back to you within 24 hours.</p>
+            </header>
+            <form class="contact__form" action="/" method="get" autocomplete="on">
+                <div class="field">
+                    <label for="name">Name</label>
+                    <input type="text" id="name" name="name" required pattern="[A-Za-z\s]+" placeholder="Your full name">
+                </div>
+                <div class="field">
+                    <label for="email">Email</label>
+                    <input type="email" id="email" name="email" required placeholder="you@email.com">
+                </div>
+                <div class="field">
+                    <label for="province">Province</label>
+                    <select id="province" name="province">
+                        <option value="">-- Select --</option>
+                        <option value="madrid">Madrid</option>
+                        <option value="barcelona">Barcelona</option>
+                        <optgroup label="Andalucía">
+                            <option>Sevilla</option>
+                            <option>Málaga</option>
+                        </optgroup>
+                    </select>
+                </div>
+                <div class="field">
+                    <label for="languages">Language</label>
+                    <select id="languages" name="languages">
+                        <option value="es">Spanish</option>
+                        <option value="en">English</option>
+                        <option value="fr">French</option>
+                    </select>
+                </div>
+                <div class="field field--full">
+                    <label for="comment">Comments</label>
+                    <textarea id="comment" name="userComment" rows="4" placeholder="Tell us what you need..."></textarea>
+                </div>
+                <div class="field field--full field--actions">
+                    <button class="btn btn-primary" type="submit">Send message</button>
+                </div>
             </form>
         </section>
      </main>
-     <footer>
-        <p>Copyright © 2026 Easycars</p>
+     <footer class="site-footer">
+        <div class="site-footer__inner">
+            <p class="site-footer__brand"><span class="brand-mark">EC</span> Easycars</p>
+            <p>© 2026 Easycars. All rights reserved.</p>
+        </div>
      </footer>
    </body>
 </html>
