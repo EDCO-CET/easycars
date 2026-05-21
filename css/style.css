@@ -626,6 +626,38 @@ textarea { resize: vertical; }
     color: var(--color-text);
 }
 
+/* ---------------------------------------------------------------
+   Favorites Section
+   ---------------------------------------------------------------
+   The favorites view sits between the catalog and the comparison
+   table. Its inner container reuses `.card-container` (grid layout)
+   so favorite cards look exactly like catalog cards.
+*/
+.favorites {
+    max-width: var(--max-width);
+    margin: 0 auto;
+    padding: 40px 24px 80px;
+}
+
+/* Empty-state message: shown only when the favorites list is empty.
+   JS toggles its display property based on the favorites count. */
+.favorites__empty {
+    text-align: center;
+    color: var(--color-text-soft);
+    padding: 40px 20px;
+    background: var(--gradient-soft);
+    border-radius: var(--radius-md);
+    border: 1px dashed var(--color-border);
+}
+
+/* "Active" (filled) state for the heart button when the car is a favorite.
+   The base `.btn-favorite` rule lives above; this one only kicks in when
+   JS adds the `is-active` class to the button. */
+.btn.btn-favorite.is-active {
+    background: var(--gradient-soft);
+    color: #ef4444;
+}
+
 
 /* Responsive */
 @media (max-width: 960px) {
